@@ -1,0 +1,6 @@
+<div class="list-group">
+  <button class="list-group-item d-flex justify-content-between align-item-center list-group-item-action" *ngFor="let company of companies">
+    {{company.name}}
+		<span class="badge badge-success badge-pill">{{company.postCount}}</span>
+  </button>
+</div>
