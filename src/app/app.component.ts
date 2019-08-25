@@ -38,6 +38,22 @@ export class AppComponent {
         title: "Yamaha placement experience",
         post_description: "Great experience",
         posted_on: "23-05-19"
+      },{
+        title: "Yamaha placement experience 2",
+        post_description: "Great experience",
+        posted_on: "23-05-19"
+      },{
+        title: "Yamaha placement experience 3",
+        post_description: "Great experience",
+        posted_on: "23-05-19"
+      },{
+        title: "Yamaha placement experience 4",
+        post_description: "Great experience",
+        posted_on: "23-05-19"
+      },{
+        title: "Yamaha placement experience 3",
+        post_description: "Great experience",
+        posted_on: "23-05-19"
       }]
     },
     {

@@ -20,12 +20,13 @@ export class CompanyDataComponent implements OnInit {
     }[]
   };
 
+
   constructor() {
 
   }
 
   ngOnInit() {
-
+    
   }
 
 }

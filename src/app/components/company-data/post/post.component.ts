@@ -1,4 +1,4 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-post',
@@ -6,27 +6,13 @@ import { Component, OnInit, Output } from '@angular/core';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  @Output() posts: { title: String, content: String, postedOn: String, company: String }[];
+   @Input() company;
   constructor() {
-    this.posts = [{
-      title: "Title1",
-      content: "Content1",
-      postedOn: "Date Time",
-      company: "Naggaro"
-    }, {
-      title: "Title2",
-      content: "Content2",
-      postedOn: "Date Time",
-      company: "Naggaro"
-    }, {
-      title: "Title3",
-      content: "Content3",
-      postedOn: "Date Time",
-      company: "To the new"
-    }];
+
   }
 
   ngOnInit() {
+    console.log(this.company.posts)
   }
 
 }
