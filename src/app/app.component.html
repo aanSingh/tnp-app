@@ -1,10 +1,14 @@
-<div class="container-fluid">
-  <div class="row">
-    <div class="col-md-3 bg-warning">
-      <app-side-nav></app-side-nav>
+<div class="container">
+  <div class="row py-4" style="height: 100vh;">
+    <div class="col-md-3">
+      <app-side-nav (showPost)="getPostData($event)" [companies]="companies"></app-side-nav>
     </div>
-    <div class="col-md-9 bg-danger">
-      <app-company-data></app-company-data>
+    <div class="col-md-9">
+      <app-company-data [displayCompany]="displayCompany"></app-company-data>
+      <!-- <app-company-data [postData]="postData"></app-company-data> -->
     </div>
   </div>
+</div>
+<div class="container bg-warning">
+  {{ companyId }}
 </div>

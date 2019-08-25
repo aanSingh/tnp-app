@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-side-nav',
@@ -6,36 +6,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-nav.component.css']
 })
 export class SideNavComponent implements OnInit {
-  companies: { name: string, postCount: number }[];
+  showCompanyPost: boolean = false;
+  companyId: Number;
+  @Input() companies;
+  // Post : {showCompanyPost: boolean, comapnyId: Number}[];
+  @Output() showPost = new EventEmitter<{ showCompanyPost: boolean, companyId: Number }>();
 
   constructor() {
-    this.companies = [{
-      name: "Yamaha",
-      postCount: 10
-    },
-    {
-      name: "Thoughtworks",
-      postCount: 5
-    },
-    {
-      name: "Naggaro",
-      postCount: 7
-    },
-    {
-      name: "Altran",
-      postCount: 8
-    },
-    {
-      name: "To the new",
-      postCount: 4
-    },
-    {
-      name: "Indus valley partners",
-      postCount: 9
-    }]
+    
   }
 
+  getPost(companyId: Number) {
+    this.showCompanyPost = true;
+    this.companyId = companyId;
+    //console.log(this.showCompanyPost)
+    this.showPost.emit({ showCompanyPost: this.showCompanyPost, companyId: this.companyId });
+  }
   ngOnInit() {
+
   }
 
 }

@@ -1,3 +1,25 @@
-<div class="bg-success">
-  hello
+<div class="container bg-light shadow pb-4" *ngIf="displayCompany">
+  <div>
+	  <a href="http://www.ymsl.in/" class="display-4 text-primary" style="text-decoration: none">{{displayCompany.name}}</a>
+    <button type="button" class="btn btn-primary btn-sm float-md-right my-3">Add post</button>
+  </div>
+	<p>{{displayCompany.address}}</p><hr>
+	<p>{{displayCompany.description}}</p>
+	<hr>
+
+<app-comment></app-comment>
+	<!-- <div class="card container shadow mb-2" >
+		<div class="card-body">
+			<a class="card-title" href="#" style="text-decoration: none">Title</a>
+			<p class="card-text">Content</p>
+		</div>
+	</div>
+
+  	<div class="card container shadow">
+		<div class="card-body">
+			<a class="card-title" href="#">Title</a>
+			<p class="card-text">Content</p>
+		</div>
+	</div> -->
+
 </div>
