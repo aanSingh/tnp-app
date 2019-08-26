@@ -7,11 +7,12 @@ import { SideNavComponent } from './components/side-nav/side-nav.component';
 import { CompanyDataComponent } from './components/company-data/company-data.component';
 import { PostComponent } from './components/company-data/post/post.component';
 import { CommentComponent } from './components/company-data/post/comment/comment.component';
-import { CompanyInfoComponent } from './components/company-data/company-info/company-info.component';
+import { CompanyDetailsComponent } from './components/company-details/company-details.component';
+//import { CompanyInfoComponent } from './components/company-data/company-info/company-info.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, SideNavComponent, CompanyDataComponent, PostComponent, CommentComponent, CompanyInfoComponent ],
+  declarations: [ AppComponent, SideNavComponent, CompanyDataComponent, PostComponent, CommentComponent, CompanyDetailsComponent],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

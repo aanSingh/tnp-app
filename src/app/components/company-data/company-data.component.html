@@ -2,28 +2,13 @@
 
 <ng-template #companyData>
 	<div *ngIf="displayCompany; else welcomePage" class="container">
-		<!-- <div class="shadow px-2 bg-primary text-light">
-			<div>
-				<a href="{{displayCompany.link}}" target="_blank" class="text-light text-decoration-none text-capitalize font-weight-bold"
-				 style="font-size: 38px">{{displayCompany.name}}</a>
-				<button type="button" class="btn btn-light btn-sm float-md-right my-3"><i class="fa fa-pencil fa-fw"></i> Write</button>
-      </div>
-      <p>{{displayCompany.address}}</p>
-    </div> -->
-
-		<!-- <div>
-			<a href="{{displayCompany.link}}" target="_blank" class="text-primary text-decoration-none text-capitalize font-weight-bold"
-			 style="font-size: 38px">{{displayCompany.name}}</a>
-			<button type="button" class="btn btn-primary btn-sm float-md-right my-3"><i class="fa fa-pencil fa-fw"></i> Write</button>
-    </div>
-	  <p style="font-size: 14px">{{displayCompany.address}}</p><hr>     -->
-    <div class="container shadow p-2">
+    <!-- <div class="container shadow p-2">
       {{displayCompany.description}}
        <hr> 
        <div class="pb-2 pt-0">placed: 20</div>
-    </div>
+    </div> -->
 
-    <div class="container bg-primary text-light shadow my-3 font-weight-bold" style="font-size: 20px;">Blogs</div>
+    <div class="container bg-primary text-light shadow font-weight-bold" style="font-size: 20px;">Blog</div>
     <app-post [company]="displayCompany" (post)="displayPost($event)"></app-post>
   </div>
 </ng-template>
