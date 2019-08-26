@@ -25,6 +25,9 @@ export class CompanyDataComponent implements OnInit {
 
   }
 
+  displayPost(event: Event){
+    console.log(event);
+  }
   ngOnInit() {
     
   }

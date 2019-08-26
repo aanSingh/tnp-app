@@ -1,8 +1,23 @@
-<div class="container">
-	<div class="card container shadow mb-2" *ngFor="let post of company.posts">
-		<div class="card-body">
-			<a class="card-title" href="#" style="text-decoration: none">{{post.title}}</a>
-			<p class="card-text">{{post.post_description}}</p>
-		</div>
+<!-- <div class="container"> -->
+<div class="card container shadow mb-2 border border-primary border-left-0 border-top-0 border-right-0" *ngFor="let post of company.posts">
+	<div class="card-body">
+		<a class="card-title text-decoration-none font-weight-bold" href="#" (click)="showPost(post.post_id)">{{post.title}}</a>
+		<p class="card-text" style="overflow: hidden; text-overflow: ellipsis; width: auto; white-space: nowrap;">{{post.post_description}}</p>
 	</div>
 </div>
+<!-- </div> -->
+
+<!-- <div class="container" *ngIf="postVisible; else companyPost">
+  <div class="container">
+    {{post.post_id}} 
+  </div>
+</div>
+
+<ng-template #companyPost>
+<div class="card container shadow mb-2 border border-primary border-left-0 border-top-0 border-right-0" *ngFor="let post of company.posts">
+	<div class="card-body">
+		<a class="card-title text-decoration-none font-weight-bold" href="#" (click)="showPost(post.post_id)">{{post.title}}</a>
+		<p class="card-text" style="overflow: hidden; text-overflow: ellipsis; width: auto; white-space: nowrap;">{{post.post_description}}</p>
+	</div>
+</div>
+</ng-template> -->

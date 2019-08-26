@@ -1,25 +1,10 @@
 <div class="container bg-light shadow pb-4" *ngIf="displayCompany">
-  <div>
-	  <a href="http://www.ymsl.in/" class="display-4 text-primary" style="text-decoration: none">{{displayCompany.name}}</a>
-    <button type="button" class="btn btn-primary btn-sm float-md-right my-3"><i class="fa fa-pencil fa-fw"></i> Write</button>
+	<div>
+		<a href="{{displayCompany.link}}" target="_blank" class="text-primary text-decoration-none text-capitalize font-weight-bold"
+		 style="font-size: 38px">{{displayCompany.name}}</a>
+		<button type="button" class="btn btn-primary btn-sm float-md-right my-3"><i class="fa fa-pencil fa-fw"></i> Write</button>
   </div>
-	<p>{{displayCompany.address}}</p><hr>
-	<p>{{displayCompany.description}}</p>
-	<hr>
-
-<app-post [company]="displayCompany"></app-post>
-	<!-- <div class="card container shadow mb-2" >
-		<div class="card-body">
-			<a class="card-title" href="#" style="text-decoration: none">Title</a>
-			<p class="card-text">Content</p>
-		</div>
-	</div>
-
-  	<div class="card container shadow">
-		<div class="card-body">
-			<a class="card-title" href="#">Title</a>
-			<p class="card-text">Content</p>
-		</div>
-	</div> -->
-
+	<p style="font-size: 14px">{{displayCompany.address}}</p><hr>
+	<p class="py-0">{{displayCompany.description}}</p><hr>
+  <app-post [company]="displayCompany" (post)="displayPost($event)"></app-post>
 </div>
