@@ -26,7 +26,7 @@ export class PostComponent implements OnInit {
     this.postVisible = true;
     this.postId = post_id;
 
-    this.post.emit({postId: this.postId, postVisible: this.postVisible});
+    this.post.emit({postId: this.postId, postVisible: this.postVisible})
     // var temp = this.company.posts.find(x => x.post_id == post_id);
     // this.post = temp;
   }

@@ -7,29 +7,48 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class CompanyDataComponent implements OnInit {
   @Input() postData: { showCompanyPost: boolean, companyId: number };
-  @Input() displayCompany: {
-    id: number,
-    name: string,
-    description: string,
-    address: string,
-    postCount: number,
-    posts: {
-      title: string,
-      post_description: string,
-      posted_on: string
-    }[]
+  @Input() displayCompany;
+  // {
+  //   id: number,
+  //   name: string,
+  //   description: string,
+  //   address: string,
+  //   postCount: number,
+  //   posts: {
+  //     post_id: number,
+  //     title: string,
+  //     post_description: string,
+  //     posted_on: string,
+  //     posted_by: string
+  //   }[]
+  // };
+  post: {
+    post_id: number,
+    title: string,
+    post_description: string,
+    posted_on: string,
+    posted_by: string
   };
+  showPost: boolean;
 
 
   constructor() {
 
   }
 
-  displayPost(event: Event){
-    console.log(event);
+  displayPost(event) {
+    console.log(event)
+    var temp = this.displayCompany.posts.find(x => x.post_id == event.postId);
+    this.post = temp;
+    this.showPost = event.postVisible;
   }
+
+  backToCompany(){
+    this.showPost = false;
+  }
+
   ngOnInit() {
-    
+
   }
 
 }

@@ -1,10 +1,43 @@
-<div class="container bg-light shadow pb-4" *ngIf="displayCompany">
-	<div>
-		<a href="{{displayCompany.link}}" target="_blank" class="text-primary text-decoration-none text-capitalize font-weight-bold"
-		 style="font-size: 38px">{{displayCompany.name}}</a>
-		<button type="button" class="btn btn-primary btn-sm float-md-right my-3"><i class="fa fa-pencil fa-fw"></i> Write</button>
+<div class="container bg-light shadow pb-4" *ngIf="showPost == true; then postTemplate else companyData"></div>
+
+<ng-template #companyData>
+	<div *ngIf="displayCompany; else welcomePage" class="container">
+		<!-- <div class="shadow px-2 bg-primary text-light">
+			<div>
+				<a href="{{displayCompany.link}}" target="_blank" class="text-light text-decoration-none text-capitalize font-weight-bold"
+				 style="font-size: 38px">{{displayCompany.name}}</a>
+				<button type="button" class="btn btn-light btn-sm float-md-right my-3"><i class="fa fa-pencil fa-fw"></i> Write</button>
+      </div>
+      <p>{{displayCompany.address}}</p>
+    </div> -->
+
+		<!-- <div>
+			<a href="{{displayCompany.link}}" target="_blank" class="text-primary text-decoration-none text-capitalize font-weight-bold"
+			 style="font-size: 38px">{{displayCompany.name}}</a>
+			<button type="button" class="btn btn-primary btn-sm float-md-right my-3"><i class="fa fa-pencil fa-fw"></i> Write</button>
+    </div>
+	  <p style="font-size: 14px">{{displayCompany.address}}</p><hr>     -->
+    <div class="container shadow p-2">
+      {{displayCompany.description}}
+       <hr> 
+       <div class="pb-2 pt-0">placed: 20</div>
+    </div>
+
+    <div class="container bg-primary text-light shadow my-3 font-weight-bold" style="font-size: 20px;">Blogs</div>
+    <app-post [company]="displayCompany" (post)="displayPost($event)"></app-post>
   </div>
-	<p style="font-size: 14px">{{displayCompany.address}}</p><hr>
-	<p class="py-0">{{displayCompany.description}}</p><hr>
-  <app-post [company]="displayCompany" (post)="displayPost($event)"></app-post>
-</div>
+</ng-template>
+
+<ng-template #welcomePage >
+  <div class="container shadow display-4 bg-primary text-light p-2 font-weight-bold text-center">
+    Welcome to Bvicam training and placement cell
+  </div>
+</ng-template>
+
+<ng-template #postTemplate>
+  <div class="container">
+    <button class="btn btn-primary" (click)="backToCompany()"><i class="fa fa-chevron-left fa-fw"></i>Back</button><hr>
+    <h4 class="text-capitalize font-weight-bold text-primary">Title</h4>
+    <p>description</p>
+  </div>
+</ng-template>
