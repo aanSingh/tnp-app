@@ -8,7 +8,6 @@ import { CompanyDataComponent } from './components/company-data/company-data.com
 import { PostComponent } from './components/company-data/post/post.component';
 import { CommentComponent } from './components/company-data/post/comment/comment.component';
 import { CompanyDetailsComponent } from './components/company-details/company-details.component';
-//import { CompanyInfoComponent } from './components/company-data/company-info/company-info.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],

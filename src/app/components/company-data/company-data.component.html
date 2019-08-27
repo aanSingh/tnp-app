@@ -2,12 +2,6 @@
 
 <ng-template #companyData>
 	<div *ngIf="displayCompany; else welcomePage" class="container">
-    <!-- <div class="container shadow p-2">
-      {{displayCompany.description}}
-       <hr> 
-       <div class="pb-2 pt-0">placed: 20</div>
-    </div> -->
-
     <div class="container bg-primary text-light shadow font-weight-bold" style="font-size: 20px;">Blog</div>
     <app-post [company]="displayCompany" (post)="displayPost($event)"></app-post>
   </div>
