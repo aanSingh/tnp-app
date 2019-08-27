@@ -1,27 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-company-data',
-  templateUrl: './company-data.component.html',
-  styleUrls: ['./company-data.component.css']
+  selector: 'app-company-posts-wrapper',
+  templateUrl: './company-posts-wrapper.component.html',
+  styleUrls: ['./company-posts-wrapper.component.css']
 })
-export class CompanyDataComponent implements OnInit {
+export class CompanyPostsWrapperComponent implements OnInit {
   @Input() postData: { showCompanyPost: boolean, companyId: number };
   @Input() displayCompany;
-  // {
-  //   id: number,
-  //   name: string,
-  //   description: string,
-  //   address: string,
-  //   postCount: number,
-  //   posts: {
-  //     post_id: number,
-  //     title: string,
-  //     post_description: string,
-  //     posted_on: string,
-  //     posted_by: string
-  //   }[]
-  // };
+
   post: {
     post_id: number,
     title: string,
@@ -43,7 +30,7 @@ export class CompanyDataComponent implements OnInit {
     this.showPost = event.postVisible;
   }
 
-  backToCompany(){
+  backToCompany() {
     this.showPost = false;
   }
 
